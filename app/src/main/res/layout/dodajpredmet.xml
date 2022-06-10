@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textW13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Predmeti"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textW14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textW13"
+        android:layout_marginLeft="20dp"
+        android:text="Dodaj predmet"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <EditText
+        android:id="@+id/eText2"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textW14"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/white"
+        android:hint="Ime predmeta"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <Button
+        android:id="@+id/btnDodaj2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/eText2"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/eText2"
+        android:text="Dodaj"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/textW15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Dodaj predavanja"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinnerOdaberiPredmet"
+        android:layout_alignParentLeft="true"
+        android:text="ODABERI PREDMET"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerOdaberiPredmet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textW15"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/ispis"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/spinnerOdaberiPredmet"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <EditText
+        android:id="@+id/eText3"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ispis"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/white"
+        android:hint="ime predavanja"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <Button
+        android:id="@+id/btnDodaj3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/eText3"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/eText3"
+        android:text="Dodaj" />
+
+    <Button
+        android:id="@+id/btnBack4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Back" />
+
+
+</RelativeLayout>

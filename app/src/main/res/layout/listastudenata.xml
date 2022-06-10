@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textW6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Pregled studenata"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textW7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textW6"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="30dp"
+        android:text="Predmet"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerPredmeti"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/textW6" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textW8" />
+
+    <TextView
+        android:id="@+id/textW8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerPredmeti"
+        android:layout_marginTop="10dp"
+        android:text="Studenti"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textW8"
+        android:layout_marginBottom="60dp" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Back" />
+
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_title_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_subject_title_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Unesi ime predmeta" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_contents_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_title_input">
+
+        <EditText
+            android:id="@+id/et_subject_class_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Unesi broj predavanja" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_place_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_contents_input">
+
+        <RadioButton
+            android:id="@+id/rb_kampus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kampus" />
+
+        <RadioButton
+            android:id="@+id/rb_trpimirova"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trpimirova" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/b_save_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spremi predmet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rg_place_input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

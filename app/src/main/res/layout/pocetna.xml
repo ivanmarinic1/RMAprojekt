@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnDodaj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnPregled"
+        android:layout_alignRight="@+id/btnPregled"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Dodaj studenta"
+        android:textSize="16dp"
+
+        />
+
+    <Button
+        android:id="@+id/btnPregled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDodaj"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Pregled studenata"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btnPrisutnost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPregled"
+        android:layout_alignLeft="@+id/btnPregled"
+        android:layout_alignRight="@+id/btnPregled"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Prisutnost"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btnPredmet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPrisutnost"
+        android:layout_alignLeft="@+id/btnPregled"
+        android:layout_alignRight="@+id/btnPregled"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Predmet"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btnPreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPredmet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="PREGLED"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:text="LOG OUT"
+        android:textSize="16dp" />
+
+
+</RelativeLayout>

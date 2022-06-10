@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation" />
+
+
+    <TextView
+        android:id="@+id/textW1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Dobrodosli"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textW2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textW1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Student Attendance Tracker"
+        android:textColor="@color/black"
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="START" />
+
+</RelativeLayout>
