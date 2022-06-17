@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StudentAttendance</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="naziv_predmeta">Naziv predmeta: </string>
+    <string name="broj_predavanja">Broj sati predavanja: </string>
+    <string name="lokacija">Lokacija: </string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/b_save_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unesi predmet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/b_list_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pregledaj predmete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/b_save_subject"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/b_add_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unesi prisutnost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/b_list_subject"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/b_list_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pregledaj prisutnosti"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_add_attendance"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/b_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Izadi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

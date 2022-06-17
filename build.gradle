@@ -1,0 +1,56 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.4.32"
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    ext{
+        //database
+        room_version = "2.4.2"
+        room = "androidx.room:room-runtime:$room_version"
+        room_compiler = "androidx.room:room-compiler:$room_version"
+        room_ktx = "androidx.room:room-ktx:$room_version" // Kotlin Extensions and Coroutines support for Room
+
+        //navigation
+        navigation_version = "2.4.1"
+        navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+        navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:$navigation_version"
+        navigation_safe_args_gradle_plugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
+
+        //scopes
+        lifecycle_scope_version = "2.4.1"
+        lifecylce_scope = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_scope_version" // LifecycleScope
+
+        // Koin:
+        koin_version = "3.1.5"
+        koin = "io.insert-koin:koin-android:$koin_version"
+        koin_navigation = "io.insert-koin:koin-androidx-navigation:$koin_version"
+
+    }
+
+    dependencies {
+        classpath navigation_safe_args_gradle_plugin
+        classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.1.0-rc01"
+        classpath navigation_safe_args_gradle_plugin
+        classpath 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.0'
+        // dagger-hilt
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.28.3-alpha"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

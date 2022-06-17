@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="rma.studentattendance.ui.start.StartFragment"
+        android:label="StartFragment"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_newSubjectFragment"
+            app:destination="@id/newSubjectFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_subjectListFragment"
+            app:destination="@id/subjectListFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_subjectDetailsFragment"
+            app:destination="@id/subjectDetailsFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_subjectsListFragment"
+            app:destination="@id/subjectsListFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_subjectAttendanceFragment"
+            app:destination="@id/subjectAttendanceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subjectListFragment"
+        android:name="rma.studentattendance.ui.subject_list.SubjectListFragment"
+        android:label="SubjectListFragment"
+        tools:layout="@layout/fragment_subject_list">
+        <action
+            android:id="@+id/action_subjectListFragment_to_subjectDetailsFragment"
+            app:destination="@id/subjectDetailsFragment" />
+        <action
+            android:id="@+id/action_subjectListFragment_to_newSubjectFragment"
+            app:destination="@id/newSubjectFragment" />
+        <action
+            android:id="@+id/action_subjectListFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subjectDetailsFragment"
+        android:name="rma.studentattendance.ui.subject_details.SubjectDetailsFragment"
+        android:label="SubjectDetailsFragment"
+        tools:layout="@layout/fragment_subject_details">
+        <action
+            android:id="@+id/action_subjectDetailsFragment_to_subjectListFragment"
+            app:destination="@id/subjectListFragment" />
+        <argument
+            android:name="subjectTitle"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_subjectDetailsFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_subjectDetailsFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newSubjectFragment"
+        android:name="rma.studentattendance.ui.subject_new.NewSubjectFragment"
+        android:label="NewSubjectFragment"
+        tools:layout="@layout/fragment_new_subject">
+        <action
+            android:id="@+id/action_newSubjectFragment_to_subjectListFragment"
+            app:destination="@id/subjectListFragment" />
+        <action
+            android:id="@+id/action_newSubjectFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subjectAttendanceFragment"
+        android:name="rma.studentattendance.ui.subject_attendance.SubjectAttendanceFragment"
+        android:label="SubjectAttendanceFragment"
+        tools:layout="@layout/fragment_subject_attendance">
+        <action
+            android:id="@+id/action_subjectListFragment_to_subjectAttendanceFragment"
+            app:destination="@id/subjectAttendanceFragment"
+            />
+        <action
+            android:id="@+id/action_subjectAttendanceFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="rma.studentattendance.ui.MapsFragment"
+        android:label="MapsFragment"
+        tools:layout="@layout/fragment_maps">
+    </fragment>
+
+    <fragment
+        android:id="@+id/subjectsListFragment"
+        android:name="rma.studentattendance.ui.subject_list.SubjectsListFragment"
+        android:label="SubjectsListFragment"
+        tools:layout="@layout/fragment_subjects_list">
+        <action
+            android:id="@+id/action_subjectsListFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_subjectsListFragment_to_SubjectDetailsFragment"
+            app:destination="@id/subjectDetailsFragment" />
+        <action
+            android:id="@+id/action_subjectsListFragment_to_SubjectAttendanceFragment"
+            app:destination="@id/subjectAttendanceFragment" />
+    </fragment>
+
+</navigation>
