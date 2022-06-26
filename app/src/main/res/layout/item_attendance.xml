@@ -14,66 +14,86 @@
     <TextView
         android:id="@+id/item_subject_title1"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
-        android:text="Ime predmeta: "
+        android:layout_marginStart="4dp"
+        android:text="@string/subject_name"
+        android:textColor="?android:attr/textColorPrimary"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/item_subject_place"/>
     <TextView
         android:id="@+id/item_subject_title"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_height="wrap_content"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/item_subject_title1"/>
     <TextView
         android:id="@+id/item_subject_classes1"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_height="wrap_content"
-        android:text="Broj sati predavanja: "
+        android:text="@string/lesson_number"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintTop_toBottomOf="@id/item_subject_title"
         app:layout_constraintStart_toEndOf="@id/item_subject_place"/>
     <TextView
         android:id="@+id/item_subject_classes"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_height="wrap_content"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintTop_toBottomOf="@id/item_subject_title"
         app:layout_constraintStart_toEndOf="@id/item_subject_classes1"/>
     <TextView
         android:id="@+id/item_subject_placee1"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_height="wrap_content"
-        android:text="Lokacija: "
+        android:textColor="?android:attr/textColorPrimary"
+        android:text="@string/location"
         app:layout_constraintTop_toBottomOf="@id/item_subject_classes"
         app:layout_constraintStart_toEndOf="@id/item_subject_place"/>
     <TextView
         android:id="@+id/item_subject_placee"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_height="wrap_content"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintTop_toBottomOf="@id/item_subject_classes"
         app:layout_constraintStart_toEndOf="@id/item_subject_placee1"/>
+
     <ProgressBar
         android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:progress="50"
-        >
+        android:scaleY="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </ProgressBar>
 
     <TextView
         android:id="@+id/tv_progress"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="362dp"
         tools:layout_editor_absoluteY="16dp"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintTop_toBottomOf="@id/progress_bar"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </TextView>
+    <TextView
+        android:id="@+id/tv_progressSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="362dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/tv_progress"
         app:layout_constraintEnd_toEndOf="parent">
 
     </TextView>

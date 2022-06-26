@@ -16,6 +16,7 @@ val databaseModule = module {
     fun provideDatabase(application: Application): SubjectDatabase {
         return SubjectDatabase.getDatabase(application)
     }
+
     fun provideSubjectDao(database: SubjectDatabase): SubjectDao {
         return database.getSubjectDao()
     }
@@ -28,7 +29,7 @@ val repositoryModule = module {
 }
 
 val viewmodelModule = module {
-    viewModel { SubjectListViewModel(get())  }
-    viewModel { SubjectDetailsViewModel(get())  }
-    viewModel { SubjectNewViewModel(get())  }
+    viewModel { SubjectListViewModel(get()) }
+    viewModel { SubjectDetailsViewModel(get()) }
+    viewModel { SubjectNewViewModel(get()) }
 }

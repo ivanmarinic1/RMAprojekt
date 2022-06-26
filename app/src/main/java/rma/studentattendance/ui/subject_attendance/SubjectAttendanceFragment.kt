@@ -1,5 +1,6 @@
 package rma.studentattendance.ui.subject_attendance
 
+//import rma.studentattendance.di.SubjectRepositoryFactory
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,19 +8,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import rma.studentattendance.ui.subject_list.OnSubjectSelectedListener
-import rma.studentattendance.databinding.FragmentSubjectListBinding
-//import rma.studentattendance.di.SubjectRepositoryFactory
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import rma.studenattendance.presentation.SubjectListViewModel
-import rma.studentattendance.data.model.Subject
 import rma.studentattendance.databinding.FragmentSubjectAttendanceBinding
-import rma.studentattendance.ui.subject_attendance.AttendanceAdapter
 
 class SubjectAttendanceFragment : Fragment() {
 
     private lateinit var binding: FragmentSubjectAttendanceBinding
     private lateinit var adapter: AttendanceAdapter
+
     //private val subjectRepository = SubjectRepositoryFactory.subjectRepository
     private val viewModel: SubjectListViewModel by viewModel()
 
@@ -29,10 +26,6 @@ class SubjectAttendanceFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentSubjectAttendanceBinding.inflate(layoutInflater)
-
-        binding.fabBack.setOnClickListener{
-            goBack()
-        }
         setupRecyclerView()
         viewModel.subjects.observe(viewLifecycleOwner) {
             if (it != null && it.isNotEmpty()) {
@@ -71,7 +64,8 @@ class SubjectAttendanceFragment : Fragment() {
 
 
     private fun goBack() {
-        val action = SubjectAttendanceFragmentDirections.actionSubjectAttendanceFragmentToStartFragment()
+        val action =
+            SubjectAttendanceFragmentDirections.actionSubjectAttendanceFragmentToStartFragment()
         findNavController().navigate(action)
     }
 }

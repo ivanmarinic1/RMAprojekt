@@ -17,10 +17,16 @@ fun Resources.getUrlResource(place: SubjectPlace): String{
     }
 }
 
-fun Resources.getLanLongResource(place: SubjectPlace): String {
+fun Resources.getLanResource(place: SubjectPlace): Double  {
     return when (place) {
-        SubjectPlace.Kampus -> "45.5566938,18.6935038"
-        SubjectPlace.Trpimirova -> "41.5533938,11.6335038"
+        SubjectPlace.Kampus ->  45.5565823
+        SubjectPlace.Trpimirova -> 45.5566874
+    }
+}
+fun Resources.getLongResource(place: SubjectPlace): Double  {
+    return when (place) {
+        SubjectPlace.Kampus ->  18.7118871
+        SubjectPlace.Trpimirova -> 18.6956948
     }
 }
 

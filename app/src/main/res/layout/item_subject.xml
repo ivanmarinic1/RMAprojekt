@@ -13,46 +13,52 @@
     <TextView
         android:id="@+id/item_subject_title1"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
-        android:text="Ime predmeta: "
+        android:layout_marginStart="4dp"
+        android:text="@string/subject_name"
         android:layout_height="wrap_content"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/item_subject_place"/>
     <TextView
         android:id="@+id/item_subject_title"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintStart_toEndOf="@id/item_subject_title1"/>
     <TextView
         android:id="@+id/item_subject_classes1"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_height="wrap_content"
-        android:text="Broj sati predavanja: "
+        android:text="@string/lesson_number"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintTop_toBottomOf="@id/item_subject_title"
         app:layout_constraintStart_toEndOf="@id/item_subject_place"/>
     <TextView
         android:id="@+id/item_subject_classes"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_height="wrap_content"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintTop_toBottomOf="@id/item_subject_title"
         app:layout_constraintStart_toEndOf="@id/item_subject_classes1"/>
     <TextView
         android:id="@+id/item_subject_placee1"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_height="wrap_content"
-        android:text="Lokacija: "
+        android:text="@string/location"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintTop_toBottomOf="@id/item_subject_classes"
         app:layout_constraintStart_toEndOf="@id/item_subject_place"/>
     <TextView
         android:id="@+id/item_subject_placee"
         android:layout_width="0dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_height="wrap_content"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintTop_toBottomOf="@id/item_subject_classes"
         app:layout_constraintStart_toEndOf="@id/item_subject_placee1"/>
 

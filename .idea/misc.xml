@@ -4,19 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1765" />
+        <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/drawable/ic_app_icon.xml" value="0.2565" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1765" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/drawable/roundcorner.xml" value="0.1" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/activity_main.xml" value="0.28229166666666666" />
+        <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/activity_maps.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/attendance.xml" value="0.28229166666666666" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/cell_name.xml" value="0.28229166666666666" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/dodajpredmet.xml" value="0.28229166666666666" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/dodavanjestudanata.xml" value="0.28229166666666666" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/fragment_classes.xml" value="0.24114583333333334" />
-        <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/fragment_maps.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/fragment_maps.xml" value="0.32323232323232326" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/fragment_new_subject.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/fragment_start.xml" value="0.1" />
+        <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/fragment_start.xml" value="0.22" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/fragment_subject_attendance.xml" value="0.18541666666666667" />
-        <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/fragment_subject_details.xml" value="0.15555555555555556" />
+        <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/fragment_subject_details.xml" value="0.5" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/fragment_subject_list.xml" value="0.1" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/fragment_subjects_list.xml" value="0.1" />
         <entry key="..\:/Users/Ivan/AndroidStudioProjects/StudentAttendance/app/src/main/res/layout/item_attendance.xml" value="0.67" />

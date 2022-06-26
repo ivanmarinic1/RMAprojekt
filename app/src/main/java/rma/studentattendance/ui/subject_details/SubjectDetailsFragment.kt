@@ -1,9 +1,9 @@
 package rma.studentattendance.ui.subject_details
 
+//import rma.studentattendance.di.SubjectRepositoryFactory
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,23 +12,28 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.api.net.FetchPlaceRequest
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import rma.studentattendance.data.model.Subject
-//import rma.studentattendance.di.SubjectRepositoryFactory
 import rma.studentattendance.databinding.FragmentSubjectDetailsBinding
 import rma.studentattendance.getPictureResource
 import rma.studentattendance.getUrlResource
 import rma.studentattendance.presentation.SubjectDetailsViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
+import rma.studentattendance.R
+import rma.studentattendance.ui.MapsActivity
+
 
 class SubjectDetailsFragment : Fragment(), OnMapReadyCallback {
 
     private lateinit var map: GoogleMap
     private lateinit var binding: FragmentSubjectDetailsBinding
+
+
     //private val subjectRepository = SubjectRepositoryFactory.subjectRepository
     private val args: SubjectDetailsFragmentArgs by navArgs()
     private val viewModel: SubjectDetailsViewModel by viewModel()
@@ -42,28 +47,30 @@ class SubjectDetailsFragment : Fragment(), OnMapReadyCallback {
         return binding.root
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val subject = viewModel.getSubjectByTitle(args.subjectTitle)
         display(subject)
-       // val subject = subjectRepository.getSubjectByTitle(args.subjectTitle)
-       // display(subject)
+
     }
 
     private fun display(subject: Subject?) {
         subject?.let {
             binding.apply {
-                tvSubjectDetailsTitle.text = subject.title
-                tvSubjectDetailsContents.text = subject.classes.toString()
-                tvSubjectDetailsLocation.text = subject.place.toString()
+                tvSubjectDetailsTitle.text = "Naziv predmeta: " + subject.title
+                tvSubjectDetailsContents.text = "Broj sati predavanja: " + subject.classes.toString()
+                tvSubjectDetailsLocation.text = "Lokacija predavanja: " + subject.place.toString()
                 ibSubjectDetailsPlace.setBackgroundResource(resources.getPictureResource(subject.place))
-                ibSubjectDetailsPlace.setOnClickListener{
-                    val action = SubjectDetailsFragmentDirections.actionSubjectDetailsFragmentToMapsFragment()
+                ibSubjectDetailsPlace.setOnClickListener {
+                    val action =
+                        SubjectDetailsFragmentDirections.actionSubjectDetailsFragmentToMapsFragment()
                     findNavController().navigate(action)
                 }
-                ibSubjectDetailsPlace1.setOnClickListener{
-                    val urlIntent = Intent("android.intent.action.VIEW", Uri.parse(resources.getUrlResource(subject.place)))
+                ibSubjectDetailsPlace1.setOnClickListener {
+                    val urlIntent = Intent(
+                        "android.intent.action.VIEW",
+                        Uri.parse(resources.getUrlResource(subject.place))
+                    )
                     startActivity(urlIntent)
                 }
             }
@@ -83,6 +90,7 @@ class SubjectDetailsFragment : Fragment(), OnMapReadyCallback {
             return fragment
         }
     }
+
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
         val osijek = LatLng(45.55111, 18.69389)

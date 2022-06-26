@@ -4,13 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import rma.studentattendance.ui.subject_list.OnSubjectSelectedListener
 import rma.studentattendance.R
 import rma.studentattendance.data.model.Subject
 import rma.studentattendance.databinding.ItemSubjectBinding
 import rma.studentattendance.getPictureResource
 
-class SubjectAdapter : RecyclerView.Adapter<SubjectViewHolder>() {
+class SubjectAdapter : RecyclerView.Adapter<SubjectAdapter.SubjectViewHolder>() {
     val subjects = mutableListOf<Subject>()
     var onSubjectSelectedListener: OnSubjectSelectedListener? = null
 
@@ -31,14 +30,14 @@ class SubjectAdapter : RecyclerView.Adapter<SubjectViewHolder>() {
         holder.bind(subject)
         onSubjectSelectedListener?.let { listener ->
             holder.itemView.setOnClickListener { listener.onSubjectSelected(subject.title) }
-            holder.itemView.setOnLongClickListener{ listener.onSubjectLongPress(subject) }
+            holder.itemView.setOnLongClickListener { listener.onSubjectLongPress(subject) }
         }
     }
 
     override fun getItemCount(): Int = subjects.count()
-}
 
-class SubjectViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+inner class SubjectViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(subject: Subject) {
         val binding = ItemSubjectBinding.bind(itemView)
@@ -48,7 +47,7 @@ class SubjectViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         binding.itemSubjectPlace.setBackgroundResource(
             binding.itemSubjectPlace.context.resources.getPictureResource(subject.place)
         )
-
     }
+}
 }
 

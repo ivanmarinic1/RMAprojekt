@@ -1,17 +1,14 @@
 package rma.studentattendance.ui.start
 
+//import rma.studentattendance.di.SubjectRepositoryFactory
+//import rma.studentattendance.ui.subject_list.SubjectAdapter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
 import rma.studentattendance.databinding.FragmentStartBinding
-import rma.studentattendance.ui.subject_list.OnSubjectSelectedListener
-
-//import rma.studentattendance.di.SubjectRepositoryFactory
-//import rma.studentattendance.ui.subject_list.SubjectAdapter
 import kotlin.system.exitProcess
 
 class StartFragment : Fragment() {
@@ -32,24 +29,27 @@ class StartFragment : Fragment() {
         return binding.root
     }
 
-   /* override fun onSubjectSelected(title: String?) {
-        val action =
-            StartFragmentDirections.actionSubjectListFragmentToSubjectDetailsFragment(title ?: "")
-        findNavController().navigate(action)
-    }*/
+    /* override fun onSubjectSelected(title: String?) {
+         val action =
+             StartFragmentDirections.actionSubjectListFragmentToSubjectDetailsFragment(title ?: "")
+         findNavController().navigate(action)
+     }*/
 
     private fun showCreateNewSubjectFragment() {
         val action = StartFragmentDirections.actionStartFragmentToNewSubjectFragment()
         findNavController().navigate(action)
     }
+
     private fun showListAttendanceFragment() {
         val action = StartFragmentDirections.actionStartFragmentToSubjectAttendanceFragment()
         findNavController().navigate(action)
     }
+
     private fun showListSubjectFragment() {
         val action = StartFragmentDirections.actionStartFragmentToSubjectListFragment()
         findNavController().navigate(action)
     }
+
     private fun showAttendanceSubjectFragment() {
         val action = StartFragmentDirections.actionStartFragmentToSubjectsListFragment()
         findNavController().navigate(action)

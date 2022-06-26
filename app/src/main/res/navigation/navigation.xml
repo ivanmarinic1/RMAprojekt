@@ -87,13 +87,14 @@
         <action
             android:id="@+id/action_subjectAttendanceFragment_to_startFragment"
             app:destination="@id/startFragment" />
+
     </fragment>
 
     <fragment
         android:id="@+id/mapsFragment"
         android:name="rma.studentattendance.ui.MapsFragment"
         android:label="MapsFragment"
-        tools:layout="@layout/fragment_maps">
+        tools:layout="@layout/activity_maps">
     </fragment>
 
     <fragment

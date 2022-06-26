@@ -2,7 +2,16 @@
     <string name="app_name">StudentAttendance</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="naziv_predmeta">Naziv predmeta: </string>
-    <string name="broj_predavanja">Broj sati predavanja: </string>
-    <string name="lokacija">Lokacija: </string>
+    <string name="subject_name">Naziv predmeta: </string>
+    <string name="lesson_number">Broj sati predavanja: </string>
+    <string name="location">Lokacija: </string>
+    <string name="subject">Predmet</string>
+    <string name="add_subject">Unesi predmet</string>
+    <string name="view_subjects">Pregledaj predmete</string>
+    <string name="add_attendance">Unesi prisutnost</string>
+    <string name="view_attendnance">Pregledaj prisutnost</string>
+    <string name="quit">Izađi</string>
+    <string name="attend">Attend</string>
+    <string name="bunk">Bunk</string>
+    <!--<string name="google_maps_key">AIzaSyDQO3iIm4QCpZ6rYBTziPqDI46JE3fYTMU</string>-->
 </resources>

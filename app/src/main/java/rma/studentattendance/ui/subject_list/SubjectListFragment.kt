@@ -1,5 +1,6 @@
 package rma.studentattendance.ui.subject_list
 
+//import rma.studentattendance.di.SubjectRepositoryFactory
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,17 +8,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import rma.studentattendance.ui.subject_list.OnSubjectSelectedListener
-import rma.studentattendance.databinding.FragmentSubjectListBinding
-//import rma.studentattendance.di.SubjectRepositoryFactory
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import rma.studenattendance.presentation.SubjectListViewModel
 import rma.studentattendance.data.model.Subject
+import rma.studentattendance.databinding.FragmentSubjectListBinding
 
 class SubjectListFragment : Fragment(), OnSubjectSelectedListener {
 
     private lateinit var binding: FragmentSubjectListBinding
     private lateinit var adapter: SubjectAdapter
+
     //private val subjectRepository = SubjectRepositoryFactory.subjectRepository
     private val viewModel: SubjectListViewModel by viewModel()
 
@@ -28,10 +28,8 @@ class SubjectListFragment : Fragment(), OnSubjectSelectedListener {
     ): View {
         binding = FragmentSubjectListBinding.inflate(layoutInflater)
 
-        binding.fabAddNote.setOnClickListener { showCreateNewSubjectFragment() }
-        binding.fabBack.setOnClickListener{
-            goBack()
-        }
+        binding.fabAddSubject.setOnClickListener { showCreateNewSubjectFragment() }
+
         setupRecyclerView()
         viewModel.subjects.observe(viewLifecycleOwner) {
             if (it != null && it.isNotEmpty()) {
@@ -52,15 +50,15 @@ class SubjectListFragment : Fragment(), OnSubjectSelectedListener {
         binding.subjectListRvSubjects.adapter = adapter
     }
 
-   /* override fun onResume() {
-        super.onResume()
-        updateData()
-    }
+    /* override fun onResume() {
+         super.onResume()
+         updateData()
+     }
 
-    private fun updateData() {
-        adapter.setSubjects(subjectRepository.getAllSubjects())
-    }
-*/
+     private fun updateData() {
+         adapter.setSubjects(subjectRepository.getAllSubjects())
+     }
+ */
     companion object {
         val Tag = "SubjectsList"
 
@@ -71,13 +69,16 @@ class SubjectListFragment : Fragment(), OnSubjectSelectedListener {
 
     override fun onSubjectSelected(title: String?) {
         val action =
-            SubjectListFragmentDirections.actionSubjectListFragmentToSubjectDetailsFragment(title ?: "")
+            SubjectListFragmentDirections.actionSubjectListFragmentToSubjectDetailsFragment(
+                title ?: ""
+            )
         findNavController().navigate(action)
     }
 
     override fun onSubjectLongPress(subject: Subject?): Boolean {
         subject?.let { it ->
             viewModel.delete(it)
+
         }
         return true
     }
@@ -86,6 +87,7 @@ class SubjectListFragment : Fragment(), OnSubjectSelectedListener {
         val action = SubjectListFragmentDirections.actionSubjectListFragmentToNewSubjectFragment()
         findNavController().navigate(action)
     }
+
     private fun goBack() {
         val action = SubjectListFragmentDirections.actionSubjectListFragmentToStartFragment()
         findNavController().navigate(action)

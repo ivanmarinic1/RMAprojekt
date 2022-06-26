@@ -12,8 +12,8 @@ interface SubjectRepository {
     fun getAllSubjects(): LiveData<List<Subject>>
     fun observeTotalClassesAttended(): LiveData<Int>
     fun observeTotalClassesBunked(): LiveData<Int>
-    fun observeTotalMustAttendClasses():LiveData<Int>
-    fun observeTotalCanBunkClasses():LiveData<Int>
+    fun observeTotalMustAttendClasses(): LiveData<Int>
+    fun observeTotalCanBunkClasses(): LiveData<Int>
     fun updateSubjectItem(subject: Subject)
 }
 

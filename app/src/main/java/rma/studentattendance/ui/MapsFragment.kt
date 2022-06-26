@@ -14,6 +14,10 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import rma.studentattendance.R
+import rma.studentattendance.getLanResource
+import rma.studentattendance.getLongResource
+
+import rma.studentattendance.model.SubjectPlace
 
 class MapsFragment : Fragment() {
 
@@ -27,9 +31,17 @@ class MapsFragment : Fragment() {
          * install it inside the SupportMapFragment. This method will only be triggered once the
          * user has installed Google Play services and returned to the app.
          */
-        val sydney = LatLng(-34.0, 151.0)
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+
+        val kampusLong = resources.getLongResource(SubjectPlace.Kampus)
+        val kampusLat = resources.getLanResource(SubjectPlace.Kampus)
+        val trpimirovaLong = resources.getLongResource(SubjectPlace.Trpimirova)
+        val trpimirovaLat = resources.getLanResource(SubjectPlace.Trpimirova)
+        val kampus = LatLng(kampusLat, kampusLong)
+        val trpimirova = LatLng(trpimirovaLat,trpimirovaLong)
+        googleMap.addMarker(MarkerOptions().position(kampus).title("Marker in Kampus"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kampus, 13f))
+        googleMap.addMarker(MarkerOptions().position(trpimirova).title("Marker in Trpimirova"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(trpimirova, 13F))
     }
 
     override fun onCreateView(
@@ -37,11 +49,15 @@ class MapsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
+        mapFragment?.getMapAsync(callback)
+
         return inflater.inflate(R.layout.fragment_maps, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(callback)
     }
